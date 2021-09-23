@@ -1,0 +1,98 @@
+import random
+
+from textblob import TextBlob
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+
+with open ('/content/drive/MyDrive/Creative Coding/DorianGray.txt') as f:
+  gray_text = f.read()
+
+gray_blob = TextBlob(gray_text)
+
+
+
+poem_text = """
+The stars in the sky
+In vain
+The tragedy of Hamlet
+   In vain
+The key in the lock
+      In vain
+The sleeping mother
+      In vain
+The lamp in the corner
+         In vain
+The lamp in the corner unlit
+            In vain
+Abraham Lincoln
+                        In vain
+The Aztec empire
+                           In vain
+The writing hand: in vain
+(The shoetrees in the shoes
+         In vain
+The windowshade string upon
+            the hand bible
+   In vain—
+   The glitter of the greenglass
+         ashtray
+In vain
+The bear in the woods
+         In vain
+The Life of Buddha
+         In vain)
+"""
+
+poem_blob = TextBlob(poem_text)
+
+
+poem_blob.tags
+
+
+
+singular_nouns = []
+plural_nouns = []
+adjectives = []
+
+for word,pos in gray_blob.tags:
+  if(pos == 'NN'):
+    singular_nouns.append(word)
+
+  if(pos == 'NNS'):
+    plural_nouns.append(word)
+    
+  if(pos == 'JJ'):
+    adjectives.append(word)
+
+
+random.choice(plural_nouns)
+
+
+print("The " + random.choice(singular_nouns) + " in the " + random.choice(singular_nouns))
+print("In vain")
+print("The " + random.choice(singular_nouns) + " of " + random.choice(singular_nouns))
+print(" " + "In vain")
+print("The " + random.choice(singular_nouns) + " in the " + random.choice(singular_nouns))
+print(" " + " " + "In vain")
+print("The " + random.choice(adjectives) + " " + random.choice(plural_nouns))
+print(" " + " " + " " + "In vain")
+print("The " + random.choice(singular_nouns) + " in the corner")
+print(" " + " " + " " + " " + "In vain")
+print(random.choice(singular_nouns))
+print(" " + " " + " " + " " + " " + "In vain")
+print("The " + random.choice(singular_nouns))
+print(" " + " " + " " + " " + " " + " " + "In vain")
+print("The " + random.choice(plural_nouns) + " hand: in vain")
+print("(The " + random.choice(plural_nouns) + " in the " + random.choice(singular_nouns))
+print(" " + " " + " " + " " + " " + "In vain")
+print("The " + random.choice(singular_nouns) + " " + random.choice(adjectives) + " upon")
+print(" " + " " + " " + " " + " " + "the " + random.choice(adjectives) + " " + random.choice(singular_nouns))
+print(" " + "In vain—")
+print("The " + random.choice(adjectives) + " of the " + random.choice(adjectives))
+print(" " + " " + " " + " " + " " + random.choice(plural_nouns))
+print("In vain")
+print("The " + random.choice(singular_nouns) + " in the " + random.choice(singular_nouns))
+print(" " + " " + " " + " " + " " + "In vain")
+print("The " + random.choice(singular_nouns) + " of " + random.choice(singular_nouns))
+print(" " + " " + " " + " " + " " + "In vain)")
