@@ -1,4 +1,4 @@
-# pythonpoetryscript
+# Digital Poetry
 This is a repository to share the code for my digital poetry assignment for DGST 302 at the University of Mary Washington.
 
 This is a Python script that takes Gutenberg's text file of [Oscar Wilde's *The Picture of Dorian Gray*](https://www.gutenberg.org/ebooks/174) and recreates Jack Kerouac's poem ["In Vain"](https://poets.org/poem/vain) through the use of a template using the words from Dorian Gray. The original code can be found in a [Colaboratory Notebook](https://colab.research.google.com/drive/1oF2RZFeXHMUlrtG-qLh1DP2LgTag8DX9?usp=sharing). I took inspiration for this type of poem from my professor, Zach Whalen's, work in his own [Template Poetry](https://colab.research.google.com/drive/11cCMGqo6wyoOVvKqfUvf6L2egk4OdQjV?usp=sharing) example he provided for us in class. 
